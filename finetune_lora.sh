@@ -1,0 +1,14 @@
+torchrun --standalone --nnodes 1 --nproc-per-node 1 vla-scripts/finetune.py \
+  --vla_path "openvla/openvla-7b" \
+  --data_root_dir /root/tensorflow_datasets/agile_dataset \
+  --dataset_name agile_dataset \
+  --run_root_dir /mnt/hpfs/baaiei/DavidHong/code/git_clone/openvla/openvla_logs \
+  --adapter_tmp_dir /mnt/hpfs/baaiei/DavidHong/code/git_clone/openvla/openvla_adapter \
+  --lora_rank 32 \
+  --batch_size 16 \
+  --grad_accumulation_steps 1 \
+  --learning_rate 5e-4 \
+  --image_aug True \
+  --wandb_project "openvla" \
+  --wandb_entity "openvla_david" \
+  --save_steps 1000
