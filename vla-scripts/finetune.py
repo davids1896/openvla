@@ -19,6 +19,10 @@ Run with:
                                     ...
 """
 
+import sys
+sys.path.append('/home/DavidHong/code/git_clone/openvla')
+
+
 import os
 from collections import deque
 from dataclasses import dataclass
