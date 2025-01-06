@@ -56,6 +56,7 @@ from prismatic.extern.hf.processing_prismatic import PrismaticImageProcessor, Pr
 # Sane Defaults
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
+#os.environ["WANDB_MODE"] = "offline"
 
 # # === Utilities ===
 # # fmt: off
@@ -107,8 +108,8 @@ class FinetuneConfig:
                                                                     #   => CAUTION: Reduces memory but hurts performance
 
     # Tracking Parameters
-    wandb_project: str = "openvla"                                  # Name of W&B project to log to (use default!)
-    wandb_entity: str = "stanford-voltron"                          # Name of entity to log under
+    wandb_project: str = "openvla_new"                                  # Name of W&B project to log to (use default!)
+    wandb_entity: str = "davids1896-peking-university"                          # Name of entity to log under
     run_id_note: Optional[str] = None                               # Extra note for logging, Weights & Biases
 
     # fmt: on
